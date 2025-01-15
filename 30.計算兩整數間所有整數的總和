@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]) {
+    int n;
+    scanf("%d",&n);
+    for (int i = 0; i < n; i++) {
+        int x, y,ans=0;
+        scanf("%d%d", &x, &y);
+        if (x > y) {
+            int swap = x;
+            x = y;
+            y = swap;
+        }
+        for (int j = x; j <= y; j++) {
+            ans =ans + j;
+        }
+        printf("%d\n",ans);
+    }
+	return 0;
+}
