@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]) {
+    int n;
+    scanf("%d",&n);
+    int g,f;
+    int ans[n];
+    for(int i=0;i<n;i++){
+        scanf("%d%d",&g,&f);
+        ans[i]=g+f; 
+        printf("%d\n",ans[i]);
+    }
+	return 0;
+}
