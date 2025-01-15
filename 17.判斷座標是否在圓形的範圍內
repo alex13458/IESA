@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main(int argc, char *argv[]) {
+    int x, y;
+    int radius = 100; 
+    while (scanf("%d %d", &x, &y)!=EOF) {
+        double distance = sqrt(x * x + y * y);
+        if (distance <= radius) {
+            printf("inside\n"); 
+        } else {
+            printf("outside\n"); 
+        }
+    }
+	return 0;
+}
