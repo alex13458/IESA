@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]) {
+    int base,number;
+    char digits[] = "0123456789ABCDEF";
+    while(scanf("%d %d",&base,&number)!=EOF){
+        char result[8];  
+        int index = 0;    
+        if (number == 0) {
+        printf("0\n");
+        return 0;
+        }
+        while (number>0) {
+            result[index] = digits[number % base];
+            number = number/base;
+            index++;
+        }
+        char *ans=(char*)malloc(sizeof(char)*index);
+        for (int i =0 ; i <=index - 1; i++) {
+            ans[i]=result[index-i-1];
+        }
+        printf("%s\n",ans);   
+    }
+	return 0;
+}
