@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]) {
+    int a,b,c;
+    scanf("%d%d%d",&a,&b,&c);
+    int swap;
+     if (a < b) {
+         swap = a; 
+         a = b; 
+         b = swap; 
+    }
+    if (a < c) {
+        swap = a; 
+        a = c; 
+        c = swap;
+     }
+     if (b < c) {
+         swap = b; 
+         b = c; 
+         c = swap; 
+     }
+     printf("%d>%d>%d\n", a, b, c);
+	return 0;
+}
