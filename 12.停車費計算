@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]) {
+    int start_hour, start_minute, end_hour, end_minute;
+    int total_minutes, cost = 0;
+    while(scanf("%d%d", &start_hour, &start_minute)!=EOF){
+    scanf("%d%d", &end_hour, &end_minute);
+    total_minutes = (end_hour * 60 + end_minute) - (start_hour * 60 + start_minute);
+    if (total_minutes <= 120) {
+        cost = (total_minutes / 30) * 30;
+    } else if (total_minutes <= 240) {
+        cost = (120 / 30) * 30 + ((total_minutes - 120) / 30) * 40;
+    } else {
+        cost = (120 / 30) * 30 + (120 / 30) * 40 + ((total_minutes - 240) / 30) * 60;
+    }
+    printf("%d\n", cost);
+
+}
+	return 0;
+}
