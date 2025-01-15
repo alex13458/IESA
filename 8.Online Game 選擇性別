@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]) {
+    char input;
+    while(scanf("%c",&input)!=EOF){
+        if(input=='E'){
+            printf("ByeBye\n");
+        }else if(input=='M'){
+            printf("Male\n");
+        }else{
+            printf("Female\n");
+        }
+    }
+	return 0;
+}
