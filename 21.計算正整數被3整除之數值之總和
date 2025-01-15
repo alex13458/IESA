@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]) {
+    int n;
+    int ans;
+    while(scanf("%d",&n)!=EOF){
+        for (int i = 1; i <= n; i++) {
+            if (i % 3 == 0) { 
+            ans += i;   
+            }
+        }
+        printf("%d\n",ans);
+    }
+	return 0;
+}
