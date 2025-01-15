@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]) {
+    int N;
+    scanf("%d", &N);
+    int total = 0;
+    for (int i = 1; i <= N; i++) {
+        if ((i % 2 == 0 && i % 3 == 0) && i % 12 != 0) {
+            total =total + i;
+        }
+    }
+        printf("%d\n", total);
+	return 0;
+}
