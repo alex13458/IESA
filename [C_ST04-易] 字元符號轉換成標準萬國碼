@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]) {
+    wchar_t unicode;
+    while(wscanf(L"%lc", &unicode)!=EOF){ 
+        unsigned int ans = (unsigned int)unicode;
+        wprintf(L"%u\n", ans);
+    }
+
+	return 0;
+}
