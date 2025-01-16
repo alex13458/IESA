@@ -4,14 +4,14 @@
 int main(int argc, char *argv[]) {
     int month;
     while(scanf("%d",&month)!=EOF){
-        if(month>2 && month<=5 ){
+        if(month>2 && month<=5 ){ //3~5月為春季
             printf("Spring\n");
-        }else if (month>5 && month<=8){
+        }else if (month>5 && month<=8){ //6~8月為夏季
             printf("Summer\n");
-        }else if(month>8 && month<12){
+        }else if(month>8 && month<12){ //9~11月為秋季
             printf("Autumn\n");
         }else{
-            printf("Winter\n");
+            printf("Winter\n"); //12~2月為冬季
         }
     }
 	return 0;
