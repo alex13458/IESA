@@ -6,15 +6,15 @@ int main(int argc, char *argv[]) {
     while(scanf("%d",&score)!=EOF){
         if(score < 0 ||score>100){
            printf("error\n"); 
-        }else if(score>=90 ){
+        }else if(score>=90 ){ //90～100分之間為A
             printf("A\n");
-        }else if(score>=80 ){
+        }else if(score>=80 ){ //80～89分為B
             printf("B\n");
-        }else if(score>=70 ){
+        }else if(score>=70 ){ //70～79分為C
             printf("C\n");
-        }else if(score>=60 ){
+        }else if(score>=60 ){ //60～69為D
             printf("D\n");
-        }else if(score<60 ){
+        }else if(score<60 ){ //未滿60為E
             printf("E\n");
         }
 
