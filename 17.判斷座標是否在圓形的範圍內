@@ -4,9 +4,9 @@
 
 int main(int argc, char *argv[]) {
     int x, y;
-    int radius = 100; 
+    int radius = 100; //圓半徑
     while (scanf("%d %d", &x, &y)!=EOF) {
-        double distance = sqrt(x * x + y * y);
+        double distance = sqrt(x * x + y * y); //√x^2+y^2 
         if (distance <= radius) {
             printf("inside\n"); 
         } else {
