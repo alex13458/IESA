@@ -5,7 +5,7 @@ int main(int argc, char *argv[]) {
     int w,h;
     double BMI;
     while(scanf("%d%d",&w,&h)!=EOF){
-        double height= h / 100.0;
+        double height= h / 100.0; // 將身高轉換為公尺
         BMI=w / (height*height);
         printf("%.2f",BMI);
     }
