@@ -27,7 +27,7 @@ int main(int argc, char *argv[]) {
         else {
             int is_int = 1;
             for (int i = 0; i < len; i++) {
-                if (!isdigit(input[i]) && input[i] != '-' && input[i] != ' ') {
+                if (!isdigit(input[i]) && input[i] != '-' && input[i] != ' ') { //檢查是否數字
                     is_int = 0; 
                     break;
                 }
