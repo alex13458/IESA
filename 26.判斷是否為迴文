@@ -2,12 +2,13 @@
 #include <stdlib.h>
 
 int main(int argc, char *argv[]) {
-    int num, reversed_num = 0, original_num, change;
+    int num, reversed_num, original_num, change;
     while(scanf("%d", &num)!=EOF){
-      original_num = num;
-      while (num != 0) {
-        change = num % 10;  
-        reversed_num = reversed_num * 10 + change;  
+      reversed_num = 0; 
+      original_num = num; //計錄原本的數字
+      while (num != 0) { // 計算反轉的數字
+        change = num % 10;  // 取最低位數
+        reversed_num = reversed_num * 10 + change;  // 將最低位數加到反轉數字
         num =num/10;  
       }
     if (original_num == reversed_num) {
