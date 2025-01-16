@@ -7,18 +7,18 @@ int main(void)
     scanf("%d", &N); 
     for (int i = 0; i < N; i++) {  
         scanf("%d%d%d", &listening, &reading, &speaking);
-        if (listening >= 60 && reading >= 60 && speaking >= 60) {
+        if (listening >= 60 && reading >= 60 && speaking >= 60) { //三個項目分數皆為 60 分以上
             printf("P\n");  
         } 
-        else if (listening + reading + speaking >= 220) {
+        else if (listening + reading + speaking >= 220) { //若三個項目中有其中一個項目分數未滿 60 分，但三個項目分數總合超過 220 分
             printf("P\n");  
-        } else if (listening < 60 && reading < 60 && speaking >= 80){
+        } else if (listening < 60 && reading < 60 && speaking >= 80){ //三個項目中有兩個項目不及格，但另一個項目成績高於 80 分
             printf("M\n");
         }else if(reading < 60 && speaking < 60 && listening >= 80){
             printf("M\n");
         }else if(speaking < 60 && listening < 60 && reading >= 80){
             printf("M\n");
-        } else if(listening >= 60 && reading >= 60 ) {
+        } else if(listening >= 60 && reading >= 60 ) { //若三個項目中有其中一個項目分數未滿 60 分，而三個項目分數總合也沒能超過 220 分
             printf("M\n"); 
         }else if(listening >= 60 && speaking >= 60 ) {
             printf("M\n"); 
