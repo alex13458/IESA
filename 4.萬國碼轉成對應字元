@@ -3,9 +3,9 @@
 #include <wchar.h>
 
 int main(int argc, char *argv[]) {
-    unsigned int unicode;
+    int unicode;
     while(scanf("%u", &unicode)!=EOF){     
-        wchar_t wc = (wchar_t)unicode;
+        wchar_t wc = (wchar_t)unicode; //萬國碼轉成對應字元
         wprintf(L"%lc\n", wc);   
     }
     return 0;
