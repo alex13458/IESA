@@ -5,18 +5,22 @@
 int main(int argc, char *argv[]) {
     int num;
     while(scanf("%d",&num)!=EOF){
-        int isPrime = 1; 
-        for (int i = 2; i <= sqrt(num); i++) { 
+	if(num==1){
+	   printf("NO\n");
+	}else{
+         int isPrime = 1; 
+         for (int i = 2; i <= sqrt(num); i++) { //檢查到數字的平方根
             if (num % i == 0) { 
             isPrime = 0;
             break;
+            }
          }
-        }
-        if (isPrime) {
+         if (isPrime) {
             printf("YES\n");
-        } else {
+         } else {
             printf("NO\n");
         }
+      }
     }
 	return 0;
 }
