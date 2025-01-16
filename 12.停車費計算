@@ -8,11 +8,11 @@ int main(int argc, char *argv[]) {
     scanf("%d%d", &end_hour, &end_minute);
     total_minutes = (end_hour * 60 + end_minute) - (start_hour * 60 + start_minute);
     if (total_minutes <= 120) {
-        cost = (total_minutes / 30) * 30;
+        cost = (total_minutes / 30) * 30; //2小時以內，每半小時30元
     } else if (total_minutes <= 240) {
-        cost = (120 / 30) * 30 + ((total_minutes - 120) / 30) * 40;
+        cost = 4 * 30 + ((total_minutes - 120) / 30) * 40; //但未滿4小時的部份，每半小時40元
     } else {
-        cost = (120 / 30) * 30 + (120 / 30) * 40 + ((total_minutes - 240) / 30) * 60;
+        cost = 4 * 30 + 4 * 40 + ((total_minutes - 240) / 30) * 60; //超過4小時以上的部份，每半小時60元
     }
     printf("%d\n", cost);
 
