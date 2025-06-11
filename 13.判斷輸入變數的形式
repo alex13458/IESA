@@ -15,7 +15,7 @@ int main() {
         // 判斷 char
         if (len == 1 && isprint(input[0])) {
             cout << "char" << endl;
-            continue;
+            continue;//跳過當前迴圈，進入下一次迴圈
         }
 
         // 判斷 float
@@ -32,7 +32,7 @@ int main() {
 
         if (is_valid_float && dot_count == 1) {
             cout << "float" << endl;
-            continue;
+            continue;//跳過當前迴圈，進入下一次迴圈
         }
 
         // 判斷 int
