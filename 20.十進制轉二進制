@@ -1,22 +1,21 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <iostream>
+using namespace std;
 
 int main(int argc, char *argv[]) {
     int number;
-    int ans[8];
-    while(scanf("%d",&number)!=EOF){
-     int isNegative = 0;
-    if (number < 0) {
-        number = 256 + number; 
+    while (cin >> number) {
+        if (number < 0) {
+            number += 256;  // 將負數轉為 8-bit 補數表示
+        }
+        int ans[8];
+        for (int i = 7; i >= 0; i--) {
+            ans[i] = number % 2;
+            number /= 2;
+        }
+        for (int i = 0; i < 8; i++) {
+            cout << ans[i];
+        }
+        cout << '\n';
     }
-    for (int i = 7; i >= 0; i--) {
-        ans[i] = number % 2; 
-        number /= 2;          
-    }
-    for (int i = 0; i < 8; i++) {
-        printf("%d", ans[i]);
-    }
-    printf("\n");
-}
-	return 0;
+    return 0;
 }
