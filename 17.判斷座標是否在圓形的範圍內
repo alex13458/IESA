@@ -1,16 +1,16 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
+#include <iostream>
+#include <cmath>
+using namespace std;
 
 int main(int argc, char *argv[]) {
     int x, y;
-    int radius = 100; //圓半徑
-    while (scanf("%d %d", &x, &y)!=EOF) {
-        double distance = sqrt(x * x + y * y); //√x^2+y^2 
+    const int radius = 100;
+    while (cin >> x >> y) {
+        double distance = sqrt(x * x + y * y); //√(x² + y²)
         if (distance <= radius) {
-            printf("inside\n"); 
+            cout << "inside" << endl;
         } else {
-            printf("outside\n"); 
+            cout << "outside" << endl;
         }
     }
 	return 0;
