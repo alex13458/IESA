@@ -1,14 +1,14 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <iostream>
+using namespace std;
 
 int main(int argc, char *argv[]) {
     int a, b;
-    scanf("%d%d", &a, &b);
+    cin >> a >> b;
     while (b != 0) { //輾轉相除法
-        int temp = b; 
+        int temp = b;
         b = a % b;
         a = temp;
     }
-    printf("%d\n", a);
+    cout <<a << endl;
 	return 0;
 }
