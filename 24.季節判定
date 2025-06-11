@@ -4,14 +4,14 @@ using namespace std;
 int main(int argc, char *argv[]) {
     int month;
     while(cin>>month){
-        if(month>2 && month<=5 ){	//3~5月為春季
+        if(month>2 && month<=5 ){//3~5月為春季
             cout<<"Spring\n";
         }else if (month>5 && month<=8){ //6~8月為夏季
             cout<<"Summer\n";
         }else if(month>8 && month<12){//9~11月為秋季
             cout<<"Autumn\n";
         }else{
-            cout<<"Winter\n";         //12~2月為冬季
+            cout<<"Winter\n"; //12~2月為冬季
         }
     }
 	return 0;
