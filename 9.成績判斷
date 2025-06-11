@@ -1,23 +1,22 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <iostream>
+using namespace std;
 
 int main(int argc, char *argv[]) {
-    int score;
-    while(scanf("%d",&score)!=EOF){
-        if(score < 0 ||score>100){
-           printf("error\n"); 
-        }else if(score>=90 ){ //90～100分之間為A
-            printf("A\n");
-        }else if(score>=80 ){ //80～89分為B
-            printf("B\n");
-        }else if(score>=70 ){ //70～79分為C
-            printf("C\n");
-        }else if(score>=60 ){ //60～69為D
-            printf("D\n");
-        }else if(score<60 ){ //未滿60為E
-            printf("E\n");
+   int score;
+    while (cin >> score) {
+        if (score < 0 || score > 100) {
+            cout << "error\n";
+        } else if (score >= 90) {//90～100分之間為A
+            cout << "A\n";
+        } else if (score >= 80) {//80～89分為B
+            cout << "B\n";
+        } else if (score >= 70) {//70～79分為C
+            cout << "C\n";
+        } else if (score >= 60) {//60～69分為D
+            cout << "D\n";
+        } else {                 //未滿60為E
+            cout << "E\n";
         }
-
     }
-	return 0;
+    return 0;
 }
