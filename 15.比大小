@@ -1,9 +1,9 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <iostream>
+using namespace std;
 
 int main(int argc, char *argv[]) {
     int a,b,c;
-    while(scanf("%d%d%d",&a,&b,&c)!=EOF){
+    while(cin>>a>>b>>c){
         int max = a;
         if (b > max) {
             max = b;
@@ -11,7 +11,7 @@ int main(int argc, char *argv[]) {
         if (c > max) {
             max = c;
         }
-        printf("%d\n", max);
+    cout << max<<endl;
     }
 	return 0;
 }
