@@ -1,12 +1,12 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <iostream>
+using namespace std;
 
 int main(int argc, char *argv[]) {
     int n;
-    scanf("%d",&n);
+    cin >>n;
     for (int i = 0; i < n; i++) {
         int x, y,ans=0;
-        scanf("%d%d", &x, &y);
+        cin >> x >> y;
         if (x > y) {
             int swap = x;
             x = y;
@@ -15,7 +15,7 @@ int main(int argc, char *argv[]) {
         for (int j = x; j <= y; j++) {
             ans =ans + j;
         }
-        printf("%d\n",ans);
+        cout << ans << endl;
     }
 	return 0;
 }
