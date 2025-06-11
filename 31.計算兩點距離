@@ -1,12 +1,14 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h> 
+#include <iostream>
+#include <cmath>
+using namespace std;
 
 int main(int argc, char *argv[]) {
-    int x1,x2,y1,y2;
-    scanf("%d%d", &x1, &y1);
-    scanf("%d%d", &x2, &y2);
-    double ans = sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
-    printf("%.2f\n",ans);
+   int x1, y1, x2, y2;
+    cin >> x1 >> y1;
+    cin >> x2 >> y2;
+    double ans = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+    cout << fixed;
+    cout.precision(2); //取到小數點以下第二位
+    cout <<ans << endl;
 	return 0;
 }
