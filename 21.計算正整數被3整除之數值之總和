@@ -1,16 +1,16 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <iostream>
+using namespace std;
 
 int main(int argc, char *argv[]) {
     int n;
-    int ans;
-    while(scanf("%d",&n)!=EOF){
+    while(cin >> n){
+    int ans=0;    
         for (int i = 1; i <= n; i++) {
             if (i % 3 == 0) { 
             ans += i;   
             }
         }
-        printf("%d\n",ans);
+        cout <<ans<<endl;
     }
 	return 0;
 }
