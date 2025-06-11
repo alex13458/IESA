@@ -3,13 +3,14 @@
 using namespace std;
 int main() {
     int n;
-    cin >> n; 
-    vector<int> ans(n);   
+    cin >> n;
+    int ans;
     for (int i = 0; i < n; ++i) {
         int g, f;
         cin >> g >> f;
-        ans[i] = g + f;
-        cout << ans[i] << endl;
+        ans= g + f;
+        cout << ans << endl;
     }
     return 0;
 }
+
