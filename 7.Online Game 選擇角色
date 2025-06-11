@@ -1,16 +1,16 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <iostream>
+using namespace std;
 
-int main(int argc, char *argv[]) {
+int main() {
     int number;
-    while(scanf("%d",&number)!=EOF){
-        if(number==1){
-            printf("Person\n");
-        }else if(number==2){
-            printf("Fairy\n");
-        }else{
-            printf("Dwarf\n");
+    while (cin >> number) {
+        if (number == 1) {
+            cout << "Person\n";
+        } else if (number == 2) {
+            cout << "Fairy\n";
+        } else {
+            cout << "Dwarf\n";
         }
     }
-	return 0;
+    return 0;
 }
