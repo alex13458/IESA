@@ -1,16 +1,16 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <iostream>
+using namespace std;
 
 int main(int argc, char *argv[]) {
-    char input;
-    while(scanf("%c",&input)!=EOF){
-        if(input=='E'){
-            printf("ByeBye\n");
-        }else if(input=='M'){
-            printf("Male\n");
-        }else{
-            printf("Female\n");
+   char input;
+    while (cin >> input) {
+        if (input == 'E') {
+            cout << "ByeBye\n";
+        } else if (input == 'M') {
+            cout << "Male\n";
+        } else {
+            cout << "Female\n";
         }
     }
-	return 0;
+    return 0;
 }
