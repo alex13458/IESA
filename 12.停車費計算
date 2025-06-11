@@ -1,21 +1,27 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <iostream>
+using namespace std;
 
 int main(int argc, char *argv[]) {
     int start_hour, start_minute, end_hour, end_minute;
-    int total_minutes, cost = 0;
-    while(scanf("%d%d", &start_hour, &start_minute)!=EOF){
-    scanf("%d%d", &end_hour, &end_minute);
-    total_minutes = (end_hour * 60 + end_minute) - (start_hour * 60 + start_minute);
-    if (total_minutes <= 120) {
-        cost = (total_minutes / 30) * 30; //2小時以內，每半小時30元
-    } else if (total_minutes <= 240) {
-        cost = 4 * 30 + ((total_minutes - 120) / 30) * 40; //但未滿4小時的部份，每半小時40元
-    } else {
-        cost = 4 * 30 + 4 * 40 + ((total_minutes - 240) / 30) * 60; //超過4小時以上的部份，每半小時60元
-    }
-    printf("%d\n", cost);
+    
+    while (cin >> start_hour >> start_minute) {
+        cin >> end_hour >> end_minute;
 
-}
-	return 0;
+        int start_total = start_hour * 60 + start_minute;
+        int end_total = end_hour * 60 + end_minute;
+        int total_minutes = end_total - start_total;
+        int cost = 0;
+
+        if (total_minutes <= 120) {
+            cost = (total_minutes / 30) * 30;//2小時以內，每半小時30元
+        } else if (total_minutes <= 240) {
+            cost = (120 / 30) * 30 + ((total_minutes - 120) / 30) * 40;//但未滿4小時的部份，每半小時40元
+        } else {
+            cost = (120 / 30) * 30 + (120 / 30) * 40 + ((total_minutes - 240) / 30) * 60;//超過4小時以上的部份，每半小時60元
+        }
+
+        cout << cost << "\n";
+    }
+
+    return 0;
 }
