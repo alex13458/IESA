@@ -1,13 +1,14 @@
-#include <stdio.h>
-#include <stdlib.h>
-
+#include <iostream>
+using namespace std;
 int main(int argc, char *argv[]) {
     int w,h;
     double BMI;
-    while(scanf("%d%d",&w,&h)!=EOF){
-        double height= h / 100.0; // 將身高轉換為公尺
+    while(cin>>w>>h){
+        double height= h / 100.0;
         BMI=w / (height*height);
-        printf("%.2f",BMI);
+        cout << fixed;
+        cout.precision(2); //取到小數點以下第一位
+        cout << BMI << endl;
     }
 	return 0;
 }
