@@ -1,13 +1,13 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <iostream>
+using namespace std;
 
 int main(int argc, char *argv[]) {
     int year;
-    scanf("%d", &year);
+    cin >>year;
     if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
-        printf("Bissextile Year\n");
+        cout<<"Bissextile Year\n";//輸出閏年
     } else {
-        printf("Common Year\n");  
+        cout<<"Common Year\n"; //輸出平年
     }
 	return 0;
 }
