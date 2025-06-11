@@ -1,12 +1,11 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <wchar.h>
+#include <iostream>
+using namespace std;
 
 int main(int argc, char *argv[]) {
-    int unicode;
-    while(scanf("%u", &unicode)!=EOF){     
-        wchar_t wc = (wchar_t)unicode; //萬國碼轉成對應字元
-        wprintf(L"%lc\n", wc);   
+    unsigned int unicode;
+    while (cin >> unicode) {
+        wchar_t wc = static_cast<wchar_t>(unicode); //萬國碼轉成對應字元
+        wcout << wc << endl;
     }
     return 0;
 }
