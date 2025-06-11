@@ -1,14 +1,14 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <iostream>
+using namespace std;
 
 int main(int argc, char *argv[]) {
     int n;
-    scanf("%d", &n); 
-    char op;  // 判斷運算符
+    cin >>n; 
+    char op; // 判斷運算符
     int real_1, imag_1, real_2,imag_2;
     int ansreal,ansimag;
     for(int i=0;i<n;i++){
-        scanf(" %c%d%d%d%d", &op, &real_1, &imag_1, &real_2, &imag_2);
+        cin >>op >> real_1 >> imag_1 >> real_2 >> imag_2;
         if (op == '+') {
             ansreal = real_1 + real_2;
             ansimag = imag_1 + imag_2;
@@ -19,7 +19,7 @@ int main(int argc, char *argv[]) {
             ansreal = real_1 * real_2 - imag_1* imag_2;
             ansimag = real_1 * imag_2 + imag_1* real_2;
         }
-        printf("%d %d\n",ansreal,ansimag);
+        cout << ansreal << " " << ansimag <<endl;
     }
 	return 0;
 }
