@@ -1,26 +1,22 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
+#include <iostream>
+using namespace std;
+#include <cmath>
 
 int main(int argc, char *argv[]) {
     int num;
-    while(scanf("%d",&num)!=EOF){
-	if(num==1){
-	   printf("NO\n");
-	}else{
-         int isPrime = 1; 
-         for (int i = 2; i <= sqrt(num); i++) { //檢查到數字的平方根
+    while(cin>>num){
+        int isPrime = 1; 
+        for (int i = 2; i <= sqrt(num); i++) {  //檢查到數字的平方根
             if (num % i == 0) { 
             isPrime = 0;
             break;
-            }
          }
-         if (isPrime) {
-            printf("YES\n");
-         } else {
-            printf("NO\n");
         }
-      }
+        if (isPrime) {
+            cout<<"YES\n";
+        } else {
+            cout<<"NO\n";
+        }
     }
 	return 0;
 }
