@@ -1,18 +1,16 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <iostream>
+#include <string>
+#include <algorithm>
+using namespace std;
 
 int main(int argc, char *argv[]) {
     int n;
-    scanf("%d", &n);  
+    cin >> n;
     for (int i = 0; i < n; i++) {
-        char goo[257];  
-        scanf("%s", goo);  
-        int length = strlen(goo);  // 計算字串長度
-        for (int j = length - 1; j >= 0; j--) { //// 反轉輸出字串
-            printf("%c", goo[j]);
-        }
-        printf("\n"); 
+        string goo;
+        cin >> goo;
+        reverse(goo.begin(), goo.end());// 反轉輸入字串
+        cout << goo << "\n";
     }
-	return 0;
+    return 0;
 }
