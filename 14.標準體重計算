@@ -1,16 +1,18 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <iostream>
+using namespace std;
 
 int main(int argc, char *argv[]) {
    int height, gender;
-    while (scanf("%d%d", &height, &gender) != EOF) {
+    while (cin >> height >> gender) {
         double ans;
         if(gender==1){
-            ans=(height-80)*0.7;
+            ans=(height-80)*0.7;//男生標準體重＝(身高－80 )*0.7
         }else{
-            ans=(height-70)*0.6;
+            ans=(height-70)*0.6;//女生標準體重＝(身高－70)*0.6
         }
-        printf("%.1f\n",ans);
+        cout << fixed;
+        cout.precision(1); //取到小數點以下第一位
+        cout << ans << endl;
     }
 	return 0;
 }
