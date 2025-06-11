@@ -1,21 +1,20 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <iostream>
+using namespace std;
 
 int main(int argc, char *argv[]) {
-    int num, reversed_num, original_num, change;
-    while(scanf("%d", &num)!=EOF){
-      reversed_num = 0; 
-      original_num = num; //計錄原本的數字
-      while (num != 0) { // 計算反轉的數字
+    int num, reversed_num = 0, original_num, change;
+    while(cin>>num ){
+    original_num = num;//計錄原本的數字
+    while (num != 0) {// 計算反轉的數字
         change = num % 10;  // 取最低位數
-        reversed_num = reversed_num * 10 + change;  // 將最低位數加到反轉數字
+        reversed_num = reversed_num * 10 + change;   // 將最低位數加到反轉數字
         num =num/10;  
-      }
+    }
     if (original_num == reversed_num) {
-        printf("YES\n"); 
-      } else {
-        printf("NO\n");  
-      }
-  }
+        cout << "YES\n"; 
+    } else {
+        cout << "NO\n";  
+    }
+}
 	return 0;
 }
