@@ -1,15 +1,19 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <iostream>
+#include <vector>
+using namespace std;
 
 int main(int argc, char *argv[]) {
     int n;
-    scanf("%d", &n);
-    int score[n];
+    cin >> n;
+    vector<int> score(n);
+
     for (int i = 0; i < n; i++) {
-        scanf("%d", &score[i]);
+        cin >> score[i];
     }
+
+    // Insertion Sort
     for (int i = 1; i < n; i++) {
-        int key = score[i]; 
+        int key = score[i];
         int j = i - 1;
         while (j >= 0 && score[j] > key) {
             score[j + 1] = score[j];
@@ -19,8 +23,8 @@ int main(int argc, char *argv[]) {
     }
 
     for (int i = 0; i < n; i++) {
-        printf("%d\n", score[i]);
+        cout << score[i] << '\n';
     }
 
-	return 0;
+    return 0;
 }
